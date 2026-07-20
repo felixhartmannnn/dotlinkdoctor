@@ -1,0 +1,38 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Packaging
+.eggs/
+wheels/
+*.whl
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+.envrc
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+*~
+
+# System
+.DS_Store
+Thumbs.db
+
+# Project-specific
+AGENTS.md
+CLAUDE.md
+*.db
+dev.db
