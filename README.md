@@ -1,8 +1,11 @@
 # dotlinkdoctor
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License-MIT](https://img.shields.io/badge/License-MIT-green)
+
 A lightweight Python CLI that scans a dotfile tree for broken symlinks and reports them as plain text or JSON. It ignores dotted directories such as `.config` and `.dotfiles` by default, so you can audit `~/` without noise.
 
-## Why
+## Description
 
 Broken symlinks accumulate in homedir dotfile setups when source files move and links are left behind. `dotlinkdoctor` is a small, portable scanner that can run anywhere Python 3.10+ is installed.
 
@@ -20,6 +23,7 @@ Broken symlinks accumulate in homedir dotfile setups when source files move and 
 From source:
 
 ```bash
+python -m pip install .
 python -m pip install .[cli]
 ```
 
@@ -32,27 +36,11 @@ python -m pip install typer
 ## Usage
 
 ```bash
-# show broken symlinks under your home directory
 dotlinkdoctor scan ~/
 
-# JSON output
 dotlinkdoctor scan ~/ --output json
 
-# show version
-dotlinkdoctor version
-```
-
-## Project structure
-
-```text
-src/dotlinkdoctor/
-  main.py     # CLI entry point
-  scanner.py  # symlink discovery and filtering
-  version.py  # package version
-tests/
-  test_scanner.py
-pyproject.toml
-README.md
+python -m dotlinkdoctor version
 ```
 
 ## Requirements
@@ -61,6 +49,19 @@ README.md
 - Optional: `typer>=0.9` for CLI mode
 - Optional dev tools: `pytest`, `ruff`
 
-## Tags
+## Project structure
 
-`dotfiles`, `symlinks`, `python`, `cli`, `lint`
+```text
+src/dotlinkdoctor/
+  main.py       # CLI entry point
+  scanner.py    # symlink discovery and filtering
+  version.py    # package version
+tests/
+  test_scanner.py
+pyproject.toml
+README.md
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
