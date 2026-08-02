@@ -20,6 +20,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
 ]
 
+[project.urls]
+Repository = "https://github.com/felixhartmannnn/dotlinkdoctor"
+
 dependencies = []
 
 [project.optional-dependencies]
