@@ -23,8 +23,6 @@ classifiers = [
 [project.urls]
 Repository = "https://github.com/felixhartmannnn/dotlinkdoctor"
 
-dependencies = []
-
 [project.optional-dependencies]
 cli = ["typer>=0.9"]
 dev = ["pytest>=7", "ruff>=0.4"]
