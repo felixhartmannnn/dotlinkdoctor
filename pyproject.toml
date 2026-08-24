@@ -30,8 +30,6 @@ dev = ["pytest>=7", "ruff>=0.4"]
 [project.scripts]
 dotlinkdoctor = "dotlinkdoctor.main:main"
 
-[project.entry-points."console_scripts"]
-
 [tool.setuptools.packages.find]
 where = ["src"]
 

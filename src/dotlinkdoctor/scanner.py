@@ -72,8 +72,7 @@ def iter_symlinks(root: Path) -> Iterator[_SymlinkEntry]:
             )
 
 
-def scan(root: Path, follow_links: bool = False) -> List[SymlinkIssue]:
-    del follow_links
+def scan(root: Path) -> List[SymlinkIssue]:
     found: List[SymlinkIssue] = []
     for entry in iter_symlinks(root):
         if entry.dangling:
