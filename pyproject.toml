@@ -36,7 +36,7 @@ where = ["src"]
 [tool.setuptools.package-dir]
 "" = "src"
 
-[tool.pytest.inioptions]
+[tool.pytest.ini_options]
 addopts = "-q"
 
 [tool.ruff]
