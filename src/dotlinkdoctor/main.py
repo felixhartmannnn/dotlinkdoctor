@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from dotlinkdoctor.scanner import scan
+from dotlinkdoctor.version import __version__
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -26,6 +27,12 @@ def build_parser() -> argparse.ArgumentParser:
         default="plain",
         choices=["plain", "json"],
         help="Output format",
+    )
+    parser.add_argument(
+        "--version",
+        action="version",
+        version=f"dotlinkdoctor {__version__}",
+        help="Show version and exit",
     )
     return parser
 
